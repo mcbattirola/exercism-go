@@ -1,8 +1,9 @@
-// Package scrabble helps with scrabble computarions
+// Package scrabble helps with scrabble computations
 package scrabble
 
 import "strings"
 
+// Score provides a scrabble score for a given word
 func Score(s string) int {
 	points := 0
 
