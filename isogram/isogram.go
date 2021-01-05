@@ -12,16 +12,15 @@ func IsIsogram(s string) bool {
 	letterInString := make(map[rune]bool)
 
 	for _, c := range s {
-		if unicode.IsLetter(c) {
-			l := unicode.ToLower(c)
-
-			_, ok := letterInString[l]
-			if ok {
-				return false
-			}
-
-			letterInString[l] = true
+		if !unicode.IsLetter(c) {
+			continue
 		}
+
+		if letterInString[unicode.ToLower(c)] {
+			return false
+		}
+
+		letterInString[unicode.ToLower(c)] = true
 	}
 
 	return true
