@@ -4,12 +4,15 @@
 package isogram
 
 import (
+	"strings"
 	"unicode"
 )
 
 // IsIsogram determines if a word or phrase is an isogram
 func IsIsogram(s string) bool {
 	letterInString := make(map[rune]bool)
+
+	s = strings.ToLower(s)
 
 	for _, c := range s {
 		if !unicode.IsLetter(c) {
