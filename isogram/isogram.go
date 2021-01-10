@@ -19,11 +19,11 @@ func IsIsogram(s string) bool {
 			continue
 		}
 
-		if letterInString[unicode.ToLower(c)] {
+		if letterInString[c] {
 			return false
 		}
 
-		letterInString[unicode.ToLower(c)] = true
+		letterInString[c] = true
 	}
 
 	return true
