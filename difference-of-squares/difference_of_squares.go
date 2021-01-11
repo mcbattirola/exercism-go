@@ -3,10 +3,6 @@ package diffsquares
 
 // SquareOfSum calculates the square of the sum of the first n natural numbers.
 func SquareOfSum(n int) int {
-	if n <= 0 {
-		return 0
-	}
-
 	sum := 0
 
 	for i := 1; i <= n; i++ {
@@ -18,10 +14,6 @@ func SquareOfSum(n int) int {
 
 // SumOfSquares calculates the sum of the squares of the first n natural numbers.
 func SumOfSquares(n int) int {
-	if n <= 0 {
-		return 0
-	}
-
 	sumOfSquares := 0
 
 	for i := 1; i <= n; i++ {
